@@ -11,9 +11,9 @@ class E_Commerce extends StatefulWidget {
 
 class _E_CommerceState extends State<E_Commerce> {
   List Images = [
-    "assets/images/airpod.jpg.",
+    "assets/images/airpods.jpg.",
     "assets/images/homepod.jpg",
-    "assets/images/i-watch.jpg",
+    "assets/images/iwatch.jpg",
     "assets/images/ipad.jpg",
     "assets/images/iphone.jpg",
   ];
@@ -36,20 +36,14 @@ class _E_CommerceState extends State<E_Commerce> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.blue,
+        appBar: AppBar(
+          backgroundColor: Colors.blue,
+          title: Center(child: Text("Explore Product")),
+        ),
+        backgroundColor: Colors.blue.shade200,
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(20),
-              child: Text(
-                "Explore Product",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold),
-              ),
-            ),
             Padding(
               padding: const EdgeInsets.all(20),
               child: Row(
@@ -60,7 +54,7 @@ class _E_CommerceState extends State<E_Commerce> {
                     width: 225,
                     child: TextField(
                       decoration: InputDecoration(
-                        hintText: "Apple Product",
+                        hintText: "Apple Product                    🔍",
                         fillColor: Colors.white,
                         filled: true,
                         border: OutlineInputBorder(
@@ -72,14 +66,6 @@ class _E_CommerceState extends State<E_Commerce> {
                   SizedBox(
                     width: 20,
                   ),
-                  Container(
-                    height: 50,
-                    width: 50,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: Colors.black)),
-                  )
                 ],
               ),
             ),
@@ -114,7 +100,8 @@ class _E_CommerceState extends State<E_Commerce> {
           height: 300,
           width: 200,
           decoration: BoxDecoration(
-              color: Colors.white, borderRadius: BorderRadius.circular(20)),
+              color: Colors.grey.shade100,
+              borderRadius: BorderRadius.circular(20)),
           child: Column(
             children: [
               Padding(
@@ -136,8 +123,7 @@ class _E_CommerceState extends State<E_Commerce> {
                         height: 50,
                         width: 50,
                         decoration: BoxDecoration(
-                            color: Colors.blue.shade800,
-                            shape: BoxShape.circle),
+                            color: Colors.blue.shade400, shape: BoxShape.circle),
                         child: Icon(Icons.local_mall),
                       ),
                     ],
